@@ -1,0 +1,80 @@
+---
+layout: default
+title:
+---
+
+
+<div class="h-screen">
+  <div class="background w-full fixed top-0 xl:h-38 text-3xl xl:text-5xl p-4 flex">
+    <div class="flex-shrink-0 xl:p-8 text-black font-bold">
+      <button onclick="document.getElementById('scroll-section').scrollTo({ top: 0, behavior: 'smooth' })"
+        class="h-16">Wimberger Modersohn</button>
+        <!--<div class="h-16">Wimberger Modersohn</div>-->
+    </div>
+    <div class="flex-grow">
+      &shy
+    </div>
+    <div id="landing-info" class="right-8 top-12 text-xs md:absolute flex-grow-0 flex flex-row gap-x-8">
+      <div class="flex flex-col">
+        <!--<div>Westendstraße 161</div>
+          <div>80339 München</div>-->
+      </div>
+      <div class="flex flex-col">
+        <div class="">Wimberger Modersohn Gbr</div>
+        <div class="">mail@wimbergermodersohn.de</div>
+      </div>
+    </div>
+  </div>
+  <div class="h-screen md:grid md:grid-cols-4 overflow-y-auto">
+    <div class="col-span-1 hidden md:flex md:flex-col">
+      <!--<div class="h-32">&shy</div>-->
+      <div class="flex-grow flex flex-col">
+        <div id="menu-section" class="flex-grow px-14 pb-14 flex flex-col separate-y-4 text-2xl gap-y-1 relative">
+          <div class="h-40">&shy</div>
+          <div class="title-t hidden"><button>Musterwohnung</button></div>
+          <div class="title-t hidden"><button>Forstfarm Uganda</button></div>
+          <div class="title-t hidden"><button>KCDC</button></div>
+          <div class="title-t hidden"><button>WBW Junges Leben</button></div>
+          <div class="hidden">TER</div>
+          <div class="hidden">+++</div>
+          <div class="flex-grow">&shy</div>
+          <div class="title-b"><button>Musterwohnung</button></div>
+          <div class="title-b"><button>Forstfarm Uganda</button></div>
+          <div class="title-b"><button>KCDC</button></div>
+          <div class="title-b"><button>WBW Junges Leben</button></div>
+          <div class="">TER</div>
+          <div class="">+++</div>
+        </div>
+        <div class="pl-2">&shy</div>
+      </div>
+    </div>
+    <div id="scroll-section" class="text-5xl overflow-y-scroll col-span-3 h-auto snap-mandatory snap-y">
+      <div id="landing-slides" class="snap-center h-screen overflow-y-hidden snap-mandatory snap-x">
+        <div class="m-20 h-full">
+          <div class="p-4 pt-20 h-full flex-shrink-0 snap-start flex justify-center">
+            <img class="object-scale-down h-2/3 w-2/3" src="assets/01_Projekte/IMG_0175.JPG" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden snap-mandatory snap-x">
+        {% include musterwohnung.html %}
+      </div>
+      <!--
+      <div
+        class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden mt-12 snap-mandatory snap-x mt-8">
+        {% include forstfarm.html %}
+      </div>-->
+      <div
+        class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden mt-12 snap-mandatory snap-x mt-8">
+        {% include kcdc.html %}
+      </div>
+      <div
+        class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden mt-12 snap-mandatory snap-x mt-8">
+        {% include wbw.html %}
+      </div>
+      <div class="h-36 w-full">
+        &shy
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>title </title>
+    <!--<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}"> --->
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="JS.js" type="text/javascript"></script>-->
+    <style>
+      .background{
+        background-color: #ff6454;
+        transition-duration:0.4s;
+      }
+      .background.landing-out{
+        background-color: white;
+      }
+      *, html, body {
+       scroll-behavior:  smooth;
+      }
+    </style>
+  </head>
+  <body class="background">
+    <div class="h-screen">
+      <div class="background w-full fixed top-0 xl:h-38 text-3xl xl:text-5xl p-4 flex">
+        <div class="flex-shrink-0 xl:p-8 text-black font-bold">
+          <!--<button onclick="document.getElementById('scroll-section').scrollTo({ top: 0, behavior: 'smooth' })"
+            class="h-16">Wimberger Modersohn</button>-->
+            <div class="h-16">Wimberger Modersohn</div>
+        </div>
+        <div class="flex-grow">
+          &shy
+        </div>
+        <div id="landing-info" class="right-8 top-12 text-xs md:absolute flex-grow-0 flex flex-row gap-x-8">
+          <div class="flex flex-col">
+            <!--<div>Westendstraße 161</div>
+              <div>80339 München</div>-->
+          </div>
+          <div class="flex flex-col">
+            <div class="">Wimberger Modersohn Gbr</div>
+            <div class="">mail@wimbergermodersohn.de</div>
+          </div>
+        </div>
+      </div>
+      <div class="h-screen md:grid md:grid-cols-4 overflow-y-auto">
+        <div class="col-span-1 hidden md:flex md:flex-col">
+          <!--<div class="h-32">&shy</div>-->
+          <div class="flex-grow flex flex-col">
+            <div id="menu-section" class="flex-grow px-14 pb-14 flex flex-col separate-y-4 text-2xl gap-y-1 relative">
+              <div class="h-40">&shy</div>
+              <div class="title-t hidden"><button>Musterwohnung</button></div>
+              <div class="title-t hidden"><button>Forstfarm Uganda</button></div>
+              <div class="title-t hidden"><button>KCDC</button></div>
+              <div class="title-t hidden"><button>WBW Junges Leben</button></div>
+              <div class="hidden">TER</div>
+              <div class="hidden">+++</div>
+              <div class="flex-grow">&shy</div>
+              <div class="title-b"><button>Musterwohnung</button></div>
+              <div class="title-b"><button>Forstfarm Uganda</button></div>
+              <div class="title-b"><button>KCDC</button></div>
+              <div class="title-b"><button>WBW Junges Leben</button></div>
+              <div class="">TER</div>
+              <div class="">+++</div>
+            </div>
+            <div class="pl-2">&shy</div>
+          </div>
+        </div>
+        <div id="scroll-section" class="text-5xl overflow-y-scroll col-span-3 h-auto snap-mandatory snap-y">
+          <!--<div id="landing-slides" class="snap-center h-screen overflow-y-hidden snap-mandatory snap-x">
+            <div class="m-20 h-full">
+              <div class="p-4 pt-20 h-full flex-shrink-0 snap-start flex justify-center">
+                <img class="object-scale-down h-2/3 w-2/3" src="assets/01_Projekte/IMG_0175.JPG" alt="">
+              </div>
+            </div>
+          </div>-->
+          <div class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden snap-mandatory snap-x">
+            <!-- preview 
+<div class="p-4 h-full w-full flex-shrink-0 snap-start">
+    <img class="object-cover h-full w-full" src="1_MusterwohnungStQuirin/MuWo-STQ-9513_matthias-kestel.jpg" alt="">
+</div>
+ -->
+<div id="div1" class="p-4 h-full flex-shrink-0 snap-start">
+    <img id="img1" class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/GR1.jpg" alt="">
+</div>
+
+<div id="div2" class="p-4 h-full flex-shrink-0 snap-start">
+    <img id="img2" class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/GR2.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/lageplan.jpg" alt="">
+</div>
+
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9523-Pano-5_matthias-kestel.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9536_matthias-kestel.jpg" alt="">
+</div>
+
+
+
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9581_matthias-kestel.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9672-Pano_matthias-kestel.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9727-Pano_matthias-kestel.jpg
+    " alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9745_matthias-kestel.jpg" alt="">
+</div>
+
+
+
+<!--
+<div class="text-base text-justify flex-shrink-0 p-8 h-full w-96 snap-start">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+</div>
+<div class="text-base text-justify flex-shrink-0 p-8 h-full w-96 snap-start"> 
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</div>
+
+
+assets/01_Projekte/1_Musterwohnung/GR1.jpg
+assets/01_Projekte/1_Musterwohnung/GR2.jpg
+assets/01_Projekte/1_Musterwohnung/lageplan.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9509_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9512_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9513_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9523-Pano-5_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9536_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9581_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9672-Pano_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9727-Pano_matthias-kestel.jpg
+assets/01_Projekte/1_Musterwohnung/MuWo-STQ-9745_matthias-kestel.jpg
+
+-->
+          </div>
+          <div
+            class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden mt-12 snap-mandatory snap-x">
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full w-auto" src="assets/01_Projekte/2_ForstfarmUganda/DSC_6338.jpg" alt="">
+            </div>
+            <div class="text-base text-justify flex-shrink-0 p-8 h-full w-96 mx-10 snap-start flex flex-col">
+                <div>Forstfarm Uganda, Design Build Projekt</div>
+                <div>Buhweju, U</div>
+                <div>ongoing</div>
+                <div>510 &#13217</div>
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/2_ForstfarmUganda/DSC_9223.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-end">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/2_ForstfarmUganda/DSC_9328.jpg" alt="">
+            </div>
+            
+          </div>
+          <div
+            class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden mt-12 snap-mandatory snap-x">
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/210702_GR.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/210702_Pikto.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/Collage1.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/Collage2.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/Collage3.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/Collage4.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/DJI_0539.jpg" alt="">
+            </div>
+            
+            <div class="p-4 h-full flex-shrink-0 snap-start">
+                <img class="object-scale-down h-full" src="assets/01_Projekte/3_KCDC/GRUNDRISS_ATMO_PDF.jpg" alt="">
+            </div>
+            
+          </div>
+          <div
+            class="project snap-center overflow-x-scroll flex h-screen md:h-4/6 overflow-y-hidden mt-12 snap-mandatory snap-x">
+            <!-- preview 
+<div class="p-4 h-full w-full flex-shrink-0 snap-start">
+    <img class="object-cover h-full w-full" src="assets/01_Projekte/4_WBWJungesLeben/Fassadenansicht.jpg" alt="">
+</div> -->
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/1OG.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/2OG.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/3OG.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/4OG.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/5OG.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/A.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/B_ueberarbeitet.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/EG.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/Fassadenansicht.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/MuW_2.OG_1.50.jpg" alt="">
+</div>
+
+<div class="p-4 h-full flex-shrink-0 snap-start">
+    <img class="object-scale-down h-full" src="assets/01_Projekte/4_WBWJungesLeben/MuWo_1.OG_1.50.jpg" alt="">
+</div>
+
+
+          </div>
+          <div class="h-36 w-full">
+            &shy
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
