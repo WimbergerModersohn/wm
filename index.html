@@ -4,8 +4,8 @@ title:
 ---
 
 
-<div class="h-screen">
-  <div class="background z-40 w-full fixed top-0 px-2 text-xl sm:h-38 sm:text-4xl sm:p-4 flex justify-center">
+<div class="h-screen grid grid-rows-6">
+  <div class="background z-40 w-full top-0 px-2 text-xl row-span-1 sm:text-4xl sm:p-4 flex justify-center">
     <div class="flex-shrink-0 p-2 xl:p-8 text-black font-bold">
       <button id="home-button" class="">Wimberger Modersohn</button>
         <!--<div class="h-16">Wimberger Modersohn</div>-->
@@ -43,8 +43,7 @@ title:
       </div>
     </div>
   </div>
-  <div id="mobile-info" class="fixed bottom-4 sm:hidden left-4 text-xs sm:text-base font-bold"></div>
-  <div class="h-screen md:grid md:grid-cols-4 overflow-y-auto">
+  <div class="row-span-5 md:grid md:grid-cols-4 overflow-y-auto">
     <div class="col-span-1 hidden md:flex md:flex-col">
       <!--<div class="h-32">&shy</div>-->
       <div class="flex-grow flex flex-col">
@@ -99,4 +98,5 @@ title:
       <div class="h-40"></div>
     </div>
   </div>
+  <div id="mobile-info" class="fixed bottom-4 sm:hidden left-4 text-xs sm:text-base font-bold"></div>
 </div>
