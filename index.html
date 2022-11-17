@@ -4,8 +4,8 @@ title:
 ---
 
 
-<div class="h-screen grid grid-rows-6">
-  <div class="background z-40 w-full top-0 px-2 text-xl row-span-1 sm:text-4xl sm:p-4 flex justify-center">
+<div class="h-screen flex flex-col">
+  <div class="background z-40 w-full top-0 px-2 text-xl sm:h-38 sm:text-4xl sm:p-4 flex justify-center">
     <div class="flex-shrink-0 p-2 xl:p-8 text-black font-bold">
       <button id="home-button" class="">Wimberger Modersohn</button>
         <!--<div class="h-16">Wimberger Modersohn</div>-->
@@ -43,7 +43,8 @@ title:
       </div>
     </div>
   </div>
-  <div class="row-span-5 md:grid md:grid-cols-4 overflow-y-auto">
+  <div id="mobile-info" class="absolute bottom-4 sm:hidden left-4 text-xs sm:text-base font-bold"></div>
+  <div class="flex-grow md:grid md:grid-cols-4 overflow-y-auto">
     <div class="col-span-1 hidden md:flex md:flex-col">
       <!--<div class="h-32">&shy</div>-->
       <div class="flex-grow flex flex-col">
@@ -68,22 +69,22 @@ title:
         <div class="pl-2">&shy</div>
       </div>
     </div>
-    <div id="scroll-section" class="font-serif overflow-y-scroll col-span-3 h-screen snap-mandatory snap-y w-auto">
+    <div id="scroll-section" class="font-serif overflow-y-scroll col-span-3 h-screen md:h-auto snap-mandatory snap-y w-auto">
       <div id="landing-slides" class="snap-center h-screen overflow-y-hidden snap-mandatory snap-x">
         <div class="p-4 pt-20 h-full flex-shrink-0 snap-start flex justify-center">
           <img id="landing-img" class="object-scale-down h-full sm:h-2/3 sm:w-2/3" src="assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0175.JPG" alt="">
         </div>
       </div>
-      <div class="project snap-center w-full h-5/6 sm:h-4/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x"> 
+      <div class="project snap-center w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x"> 
         {% include hausamsee.html %}
       </div>
-      <div class="project snap-center w-full h-5/6 sm:h-4/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
+      <div class="project snap-center w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
         {% include musterwohnung.html %}
       </div>
-      <div class="project snap-center w-full h-5/6 sm:h-4/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
+      <div class="project snap-center w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
         {% include kcdc.html %}
       </div>
-      <div class="project snap-center w-full h-5/6 sm:h-4/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
+      <div class="project snap-center w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
         {% include jungesleben.html %}
       </div>
       <div class="project snap-center w-full h-5/6 sm:h-4/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-24"> 
@@ -98,5 +99,4 @@ title:
       <div class="h-40"></div>
     </div>
   </div>
-  <div id="mobile-info" class="fixed bottom-4 sm:hidden left-4 text-xs sm:text-base font-bold"></div>
 </div>
