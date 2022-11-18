@@ -1,4 +1,34 @@
+var li;
+const landingImgs = [
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0175.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0071.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_9EE5DA0B-52A3-44B8-8101-1CBA539792B1.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0091.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_99D51AFF-6302-4096-ABBB-F7581CDB7982.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0154.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0349.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0430.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0613.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0665.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0777.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0814.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0920.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_963b70a7-6f09-4a0b-a98f-261ec68425de.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1195.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1730.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1748.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_3608.JPG",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_5483.jpeg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_5483.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_7275.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_7318.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_8228.jpg",
+    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_8336.jpg"
+];
+nbImg = landingImgs.length;
+
 document.addEventListener('DOMContentLoaded', (event) => {
+    randomLandImg();
     document.getElementById("scroll-section").onscroll = function () {
         // bg color change, class background + landing-out class toggled
         if (document.getElementById("landing-slides").getBoundingClientRect().top < -50){
@@ -74,39 +104,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             })
         })
     });
-
-    
-    let i = 0;
-    const landingImgs = [
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0175.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0071.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_9EE5DA0B-52A3-44B8-8101-1CBA539792B1.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0091.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_99D51AFF-6302-4096-ABBB-F7581CDB7982.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0154.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0349.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0430.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0613.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0665.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0777.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0814.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0920.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_963b70a7-6f09-4a0b-a98f-261ec68425de.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1195.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1730.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1748.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_3608.JPG",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_5483.jpeg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_5483.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_7275.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_7318.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_8228.jpg",
-        "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_8336.jpg"
-    ];
     document.getElementById('home-button').addEventListener('click', function(){
         document.getElementById('scroll-section').scrollTo({ top: 0, behavior: 'smooth' });
-        // change img
-        i = (i >= landingImgs.length - 1) ? 0 : i + 1;
-        document.getElementById('landing-img').src = landingImgs[i];
+        randomLandImg();
     });
 });
+
+function randomLandImg() {
+    var randNb = () => {return Math.floor(Math.random()*nbImg)};
+    var ne;
+    ne = randNb();
+    while (ne == li) {
+        ne = randNb();
+    }
+    li = ne;
+    document.getElementById("landing-img").src = landingImgs[li];
+}
