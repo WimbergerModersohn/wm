@@ -6,9 +6,11 @@ module.exports = {
     './*.html',
   ],
   theme: {
-    theme: {
-      extend: {},
+    extend: {
+        colors: {
+          nOrange: '#ff6454',
+        }
+      },
     },
-  },
   plugins: []
 }
