@@ -15,11 +15,12 @@ title:
     </div>
     <div x-data="{ open: false }" x-on:click.outside="open = false" class="md:hidden my-auto flex flex-col justify-center relative">
       <button id="mobile-menu" x-on:click="open = !open" class="">
-        <svg viewBox="0 0 100 80" class="h-6 w-6 sm:h-10 sm:w-10">
+        <svg x-show="open" viewBox="0 0 100 80" class="h-6 w-6 sm:h-10 sm:w-10">
           <rect width="100" height="20" rx="10"></rect>
           <rect y="30" width="100" height="20" rx="10"></rect>
           <rect y="60" width="100" height="20" rx="10"></rect>
         </svg>
+        <img xshow="!open" class="w-6 h-6 sm:h-10 sm:w-10" src="assets/Mediamodifier-Design.svg"></img>
       </button>
       <div x-show="open" class="absolute top-8 right-0 h-1/2 bg-green-200 bg-opacity-0 text-lg font-bold text-left font-mono">
         <ul>
