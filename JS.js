@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('scroll-section').scrollTo({ top: 0, behavior: 'smooth' });
         randomLandImg();
     });
+    document.getElementById('landing-img').addEventListener('click', function(){
+        randomLandImg();
+    });
 });
 
 function randomLandImg() {
