@@ -712,6 +712,10 @@ video {
   flex-grow: 0;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .snap-x {
   scroll-snap-type: x var(--tw-scroll-snap-strictness);
 }
