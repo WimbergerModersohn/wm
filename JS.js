@@ -9,7 +9,6 @@ const landingImgs = [
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0349.jpg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0430.jpg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0613.JPG",
-    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0665.JPG",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0777.JPG",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0814.jpg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_0920.JPG",
@@ -48,12 +47,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         
 
         // menu sliding
-        
         let clientHeight = document.documentElement.clientHeight
         let projects = Array.from(document.querySelectorAll('.project'))
         let titlesT = Array.from(document.querySelectorAll('.title-t'))
         let titlesB = Array.from(document.querySelectorAll('.title-b'))
         projects.forEach(function(element, index){
+            element.scrollTo({
+                left: 0,
+                behavior: 'smooth'
+            });
             if (element.getBoundingClientRect().top + element.getBoundingClientRect().height / 2 - clientHeight / 2 < 100) {
                 if (!titlesB[index].classList.contains("hidden")){
                     titlesB[index].classList.add("hidden");
