@@ -17,7 +17,6 @@ const landingImgs = [
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1730.jpg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_1748.JPG",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_3608.JPG",
-    "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_5483.jpeg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_5483.jpg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_7275.jpg",
     "assets/0_2_0_2_Content/0_LandingPage/Fotos/WMA_7318.jpg",
