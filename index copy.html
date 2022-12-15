@@ -78,3 +78,119 @@ title:
     </div>
   </div>
 </div>
+
+
+
+
+
+<!-- new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy new copy -->
+
+
+
+---
+layout: default
+title:
+---
+
+
+<div class="h-screen flex flex-col">
+  <div class="background z-40 w-full top-0 px-2 text-xl sm:h-38 sm:text-4xl sm:p-4 flex justify-center">
+    <div class="flex-shrink-0 p-2 xl:p-8 text-black font-bold">
+      <button id="home-button" class="">Wimberger Modersohn</button>
+        <!--<div class="h-16">Wimberger Modersohn</div>-->
+    </div>
+    <div class="flex-grow">
+      &shy
+    </div>
+    <div x-data="{ open: false }" x-on:mousedown.outside="open = false" class="md:hidden my-auto flex flex-col justify-center relative">
+      <button id="mobile-menu" x-on:click="open = !open" class="">
+        <svg x-show="!open" viewBox="0 0 100 80" class="h-6 w-6 sm:h-10 sm:w-10">
+          <rect width="100" height="20" rx="10"></rect>
+          <rect y="30" width="100" height="20" rx="10"></rect>
+          <rect y="60" width="100" height="20" rx="10"></rect>
+        </svg>
+        <img x-show="open" class="w-6 h-6 sm:h-10 sm:w-10" src="assets/Mediamodifier-Design.svg"></img>
+      </button>
+      <div x-show="open" class="absolute top-8 right-0 h-1/2 text-lg font-bold text-left font-mono">
+        <ul class="bg-white rounded-sm bg-opacity-80 p-2">
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Haus am See</button></li>
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Musterwohnung</button></li>
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">KCDC</button></li>
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Junges Leben</button></li>
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Forstfarm Uganda</button></li>
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">+++</button></li>
+          <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Info</button></li>
+        </ul>
+      </div>
+    </div>
+    <div id="landing-info" class="right-8 top-8 text-xs flex-grow-0 absolute hidden md:flex flex-row gap-x-4">
+      <a href="https://www.instagram.com/wimbergermodersohn/" target=”_blank” class="flex flex-col justify-center align-items-center">
+        <img class="w-6 h-6" src="assets/Instagram_Glyph_Black.svg"></img>
+      </a>
+      <div class="flex flex-col">
+        <div class="">Wimberger Modersohn GbR</div>
+        <a href="mailto:mail@wimbergermodersohn.de" class="">mail@wimbergermodersohn.de</a>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-info" class="absolute bottom-4 sm:hidden left-4 text-lg sm:text-base font-mono font-bold"></div>
+  <div class="flex-grow md:grid md:grid-cols-4 overflow-y-auto">
+    <div class="col-span-1 hidden md:flex md:flex-col">
+      <!--<div class="h-32">&shy</div>-->
+      <div class="flex-grow flex flex-col font-mono">
+        <div id="menu-section" class="flex-grow px-14 pb-14 flex flex-col separate-y-4 text-lg lg:text-xl gap-y-1 relative text-left">
+          <div class="title-t hidden w-full"><button class="text-left leading-tight p-2">Haus am See</button></div>
+          <div class="title-t hidden w-full"><button class="text-left leading-tight p-2  text-[#ff6454] rounded-sm">Musterwohnung</button></div>
+          <div class="title-t hidden w-full"><button class="text-left leading-tight">KCDC</button></div>
+          <div class="title-t hidden w-full"><button class="text-left leading-tight">Junges Leben</button></div>
+          <div class="title-t hidden w-full"><button class="text-left leading-tight">Forstfarm Uganda</button></div>
+          <div class="title-t hidden w-full"><button class="text-left leading-tight">+++</button></div>
+          <div class="title-t hidden w-full"><button class="text-left leading-tight">Info</button></div>
+          <div class="flex-grow">&shy</div>
+          <div class="title-b w-full"><button class="text-left leading-tight">Haus am See</button></div>
+          <div class="title-b w-full"><button class="text-left leading-tight">Musterwohnung</button></div>
+          <div class="title-b w-full"><button class="text-left leading-tight">KCDC</button></div>
+          <div class="title-b w-full"><button class="text-left leading-tight">Junges Leben</button></div>
+          <div class="title-b w-full"><button class="text-left leading-tight">Forstfarm Uganda</button></div>
+          <div class="title-b w-full"><button class="text-left leading-tight">+++</button></div>
+          <div class="title-b w-full"><button class="text-left leading-tight">Info</button></div>
+        </div>
+      </div>
+    </div>
+    <div id="scroll-section" class="font-serif overflow-y-scroll col-span-3 h-screen md:h-auto snap-mandatory snap-y w-auto">
+      <div id="landing-slides" class="snap-start h-full overflow-y-hidden snap-mandatory snap-x">
+        <div class="p-4 h-5/6 sm:h-full flex-shrink-0 snap-start flex justify-center">
+          <img id="landing-img" class="object-scale-down h-full sm:h-5/6 sm:w-5/6 cursor-pointer" alt="">
+        </div>
+      </div>
+      <div class="project snap-start w-full h-5/6"> 
+        <div class="snap-start w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x">
+          {% include hausamsee.html %}
+        </div>
+      </div>
+      <div class="project snap-center bg-[#ff6454]/25 w-full h-4/6 mt-96 border-2 border-dashed border-gray-600 rounded-sm relative">
+        <div id="iproject" class="w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include musterwohnung.html %}
+        </div>
+        <div id="larrow" class="absolute pl-4 bg-transparent top-[40%] left-0"><img class="w-auto h-20" src="assets/svg-5.svg"></div>
+        <div id="rarrow" class="absolute pr-4 bg-transparent top-[40%] right-0"><img class="w-auto h-20" src="assets/svg-4.svg"></div>
+      </div>
+      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-96"> 
+        {% include kcdc.html %}
+      </div>
+      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
+        {% include jungesleben.html %}
+      </div>
+      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
+        {% include forstfarmuganda.html %}
+      </div>
+      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36 text-right"> 
+        {% include +++.html %}
+      </div>
+      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
+        {% include info.html %}
+      </div>
+      <div class="h-40"></div>
+    </div>
+  </div>
+</div>

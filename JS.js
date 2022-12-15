@@ -49,47 +49,82 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let clientHeight = document.documentElement.clientHeight
         let projects = Array.from(document.querySelectorAll('.project'))
         let titlesT = Array.from(document.querySelectorAll('.title-t'))
-        let titlesB = Array.from(document.querySelectorAll('.title-b'))
         projects.forEach(function(element, index){
             element.scrollTo({
                 left: 0,
                 behavior: 'smooth'
             });
             if (element.getBoundingClientRect().top + element.getBoundingClientRect().height / 2 - clientHeight / 2 < 100) {
-                if (!titlesB[index].classList.contains("hidden")){
-                    titlesB[index].classList.add("hidden");
-                };
-                if (titlesT[index].classList.contains("hidden")){
-                    titlesT[index].classList.remove("hidden");
-                };
-                document.getElementById('mobile-info').innerHTML = titlesT[index].innerHTML
+
+                document.getElementById('mobile-info').innerHTML = titlesT[index].innerHTML;
+                titlesT.forEach(function(element,index){if (element.classList.contains('text-nOrange')){element.classList.remove('text-nOrange')}})
+                if (!titlesT[index].classList.contains('text-nOrange')){
+                    titlesT[index].classList.add('text-nOrange');
+                }
             }
-            else if (element.getBoundingClientRect().top + element.getBoundingClientRect().height / 2 - clientHeight / 2 > 300) {
-                if (!titlesT[index].classList.contains("hidden")){
-                    titlesT[index].classList.add("hidden");
-                };
-                if (titlesB[index].classList.contains("hidden")){
-                    titlesB[index].classList.remove("hidden");
-                };
+            else if (Math.abs(element.getBoundingClientRect().top + element.getBoundingClientRect().height / 2 - clientHeight / 2) > 101) {
+                // empty when scrolling up
+                if (titlesT[index].classList.contains('text-nOrange')){
+                    titlesT[index].classList.remove('text-nOrange');
+                }
             }
-            // else : scroll between 10 & 300 -> scroll / distance(upper-lower)
         });
     };
 
     // add menu button eventlisteners
     let tTitles = Array.from(document.querySelectorAll('.title-t'));
-    let bTitles = Array.from(document.querySelectorAll('.title-b'));
     let mTitles = Array.from(document.querySelectorAll('.title-m'));
     let projects = Array.from(document.querySelectorAll('.project'));
-    tTitles.forEach(function (element, index) {
-        element.addEventListener('click', function () {
-            document.getElementById('scroll-section').scrollTo({
-                top: projects[index].offsetTop,
+    let iprojects = Array.from(document.querySelectorAll('.iproject'))
+
+    iprojects.forEach(function(element){
+        element.onscroll = function(){
+            let larr = this.parentElement.querySelector('.larrow');
+            let rarr = this.parentElement.querySelector('.rarrow');
+            if (this.scrollLeft > 5) {
+                if (larr.classList.contains("hidden")){
+                    larr.classList.remove("hidden");
+                    larr.classList.add("absolute");
+                };
+            }
+            else if(this.scrollLeft < 10) {
+                if (larr.classList.contains("absolute")){
+                    larr.classList.remove("absolute");
+                    larr.classList.add("hidden");
+                }
+            }
+            if (this.scrollLeft + this.clientWidth - this.scrollWidth < - 10) {
+                if (rarr.classList.contains("hidden")){
+                    rarr.classList.remove("hidden");
+                    rarr.classList.add("absolute");
+                };
+            }
+            else if(this.scrollLeft + this.clientWidth - this.scrollWidth) {
+                if (rarr.classList.contains("absolute")){
+                    rarr.classList.remove("absolute");
+                    rarr.classList.add("hidden");
+                }
+            }
+
+        };
+    })
+    
+    projects.forEach(function(element){
+        larrow = element.querySelector('.larrow'); 
+        rarrow = element.querySelector('.rarrow');
+        larrow.addEventListener('click', function(){
+            this.parentElement.querySelector('.iproject').scrollBy({left:-100,
                 behavior: 'smooth'
-            })
-        })
-    });
-    bTitles.forEach(function (element, index) {
+              });
+        });
+        rarrow.addEventListener('click', function(){
+            this.parentElement.querySelector('.iproject').scrollBy({left:100,
+                behavior: 'smooth'
+              });
+        });
+    })
+
+    tTitles.forEach(function (element, index) {
         element.addEventListener('click', function () {
             document.getElementById('scroll-section').scrollTo({
                 top: projects[index].offsetTop,
@@ -112,15 +147,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('landing-img').addEventListener('click', function(){
         randomLandImg();
     });
+
+    document.getElementById('rarrow').addEventListener('click', function(){
+        document.getElementById("iproject").scrollBy({left:100,
+            behavior: 'smooth'
+          });
+    });
+    document.getElementById('larrow').addEventListener('click', function(){
+        document.getElementById("iproject").scrollBy({left:-100,
+            behavior: 'smooth'
+          });
+    });
 });
 
+
+
+
 function randomLandImg() {
+    let landingImg = document.getElementById("landing-img")
     var randNb = () => {return Math.floor(Math.random()*nbImg)};
     var ne;
+    var randPR = () => {return Math.floor(Math.random()*250)};
+    var randPT = () => {return Math.floor(Math.random()*250)};
+    var randPL = () => {return Math.floor(Math.random()*250)};
+    var randPB = () => {return Math.floor(Math.random()*250)};
+
     ne = randNb();
     while (ne == li) {
         ne = randNb();
     }
     li = ne;
-    document.getElementById("landing-img").src = landingImgs[li];
+
+    landingImg.src = landingImgs[li];
+    landingImg.parentElement.style.padding = randPT() + "px " + randPL() + "px " + randPB() + "px " + randPR() + "px";
+    console.log(landingImg.parentElement.style.padding)
 }

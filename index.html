@@ -5,7 +5,7 @@ title:
 
 
 <div class="h-screen flex flex-col">
-  <div class="background z-40 w-full top-0 px-2 text-xl sm:h-38 sm:text-4xl sm:p-4 flex justify-center">
+  <div class="background z-40 w-full top-0 px-2 text-xl sm:h-38 md:h-64 xl:h-1/6 sm:text-4xl sm:p-4 flex justify-center">
     <div class="flex-shrink-0 p-2 xl:p-8 text-black font-bold">
       <button id="home-button" class="">Wimberger Modersohn</button>
         <!--<div class="h-16">Wimberger Modersohn</div>-->
@@ -22,8 +22,8 @@ title:
         </svg>
         <img x-show="open" class="w-6 h-6 sm:h-10 sm:w-10" src="assets/Mediamodifier-Design.svg"></img>
       </button>
-      <div x-show="open" class="absolute top-8 right-0 h-1/2 text-lg font-bold text-left font-mono">
-        <ul class="bg-white rounded-sm bg-opacity-80 p-2">
+      <div x-show="open" class="absolute top-8 right-0 h-1/2 w-screen pl-4 text-lg font-bold text-right font-mono">
+        <ul class="bg-white rounded-sm bg-opacity-10 p-2 w-full backdrop-blur-sm">
           <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Haus am See</button></li>
           <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">Musterwohnung</button></li>
           <li class="title-m"><button x-on:click="open = false" class="leading-tight text-left">KCDC</button></li>
@@ -44,58 +44,86 @@ title:
       </div>
     </div>
   </div>
-  <div id="mobile-info" class="absolute bottom-4 sm:hidden left-4 text-lg sm:text-base font-mono font-bold"></div>
+  <div id="mobile-info" class="absolute top-14 sm:hidden left-4 text-lg sm:text-base font-mono font-bold z-10"></div>
   <div class="flex-grow md:grid md:grid-cols-4 overflow-y-auto">
     <div class="col-span-1 hidden md:flex md:flex-col">
       <!--<div class="h-32">&shy</div>-->
       <div class="flex-grow flex flex-col font-mono">
-        <div id="menu-section" class="flex-grow px-14 pb-14 flex flex-col separate-y-4 text-lg lg:text-xl gap-y-1 relative text-left">
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">Haus am See</button></div>
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">Musterwohnung</button></div>
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">KCDC</button></div>
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">Junges Leben</button></div>
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">Forstfarm Uganda</button></div>
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">+++</button></div>
-          <div class="title-t hidden w-full"><button class="text-left leading-tight">Info</button></div>
-          <div class="flex-grow">&shy</div>
-          <div class="title-b w-full"><button class="text-left leading-tight">Haus am See</button></div>
-          <div class="title-b w-full"><button class="text-left leading-tight">Musterwohnung</button></div>
-          <div class="title-b w-full"><button class="text-left leading-tight">KCDC</button></div>
-          <div class="title-b w-full"><button class="text-left leading-tight">Junges Leben</button></div>
-          <div class="title-b w-full"><button class="text-left leading-tight">Forstfarm Uganda</button></div>
-          <div class="title-b w-full"><button class="text-left leading-tight">+++</button></div>
-          <div class="title-b w-full"><button class="text-left leading-tight">Info</button></div>
+        <div id="menu-section" class="flex-grow px-8 lg:px-14 pb-14 flex flex-col separate-y-4 text-lg lg:text-xl gap-y-1 relative text-left justify-center">
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">Haus am See</button></div>
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">Musterwohnung</button></div>
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">KCDC</button></div>
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">Junges Leben</button></div>
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">Forstfarm Uganda</button></div>
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">+++</button></div>
+          <div class="title-t w-full"><button class="text-left leading-tight px-2">Info</button></div>
         </div>
       </div>
     </div>
-    <div id="scroll-section" class="font-serif overflow-y-scroll col-span-3 h-screen md:h-auto snap-mandatory snap-y w-auto text-nOrange">
-      <div id="landing-slides" class="snap-start h-full overflow-y-hidden snap-mandatory snap-x">
-        <div class="p-4 h-5/6 sm:h-full flex-shrink-0 snap-start flex justify-center">
+    <div id="scroll-section" class="font-serif overflow-y-scroll col-span-3 h-screen md:h-auto snap-mandatory snap-y w-auto">
+      <div id="landing-slides" class="snap-start h-full overflow-y-hidden snap-mandatory snap-x flex flex-col justify-center">
+        <div class="p-4 h-full flex-shrink-0 snap-start flex justify-center">
           <img id="landing-img" class="object-scale-down h-full sm:h-5/6 sm:w-5/6 cursor-pointer" alt="">
         </div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x"> 
-        {% include hausamsee.html %}
+
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include hausamsee.html %}
+        </div>
+        <div class="larrow hidden px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
-        {% include musterwohnung.html %}
+
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div id="iproject" class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include musterwohnung.html %}
+        </div>
+        <div id="larrow" class="larrow absolute px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div id="rarrow" class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
-        {% include kcdc.html %}
+
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include kcdc.html %}
+        </div>
+        <div class="larrow hidden px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
-        {% include jungesleben.html %}
+
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include jungesleben.html %}
+        </div>
+        <div class="larrow hidden px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
-        {% include forstfarmuganda.html %}
+
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include forstfarmuganda.html %}
+        </div>
+        <div class="larrow hidden px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36 text-right"> 
-        {% include +++.html %}
+
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include +++.html %}
+        </div>
+        <div class="larrow hidden px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
-      <div class="project snap-start w-full h-5/6 overflow-x-scroll whitespace-nowrap snap-mandatory snap-x mt-36"> 
-        {% include info.html %}
+      
+      <div class="project snap-center bg-[#EEF0FC] w-full h-5/6 xl:h-4/6 mt-96 rounded-sm relative font-mono">
+        <div class="iproject w-full h-full overflow-x-scroll whitespace-nowrap snap-mandatory snap-x p-4"> 
+          {% include info.html %}
+        </div>
+        <div class="larrow hidden px-1 lg:ml-2 top-[40%] left-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-5.svg"></div>
+        <div class="rarrow absolute px-1 lg:mr-2 top-[40%] right-0 backdrop-blur-sm md:bg-[#EEF0FC]/50 rounded-lg p-2"><img class="w-auto h-14" src="assets/svg-4.svg"></div>
       </div>
       <div class="h-40"></div>
     </div>
   </div>
 </div>
+

@@ -1,0 +1,17 @@
+<svg width="30" height="100" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_1_blur" x="-50%" y="-50%" width="200%" height="200%">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+  </filter>
+  <filter id="svg_2_blur" x="-50%" y="-50%" width="200%" height="200%">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#000000" x="233.48155" y="17.81943" width="10.0369" height="292.36112" id="svg_1" transform="rotate(-14.2964 238.5 164)" stroke="#000" filter="url(#svg_1_blur)" rx="4"/>
+  <rect fill="#000000" x="234.23401" y="296.74611" width="10.0369" height="292.36112" id="svg_2" transform="rotate(14 239.252 442.414)" stroke="#000" rx="3" filter="url(#svg_2_blur)"/>
+  <line stroke-width="3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="0" x2="30" y1="50" x1="0.00008" stroke="#000" fill="none"/>
+  <line y1="100" x1="30" transform="rotate(180 15 75)" stroke-width="3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="50" stroke="#000" fill="none"/>
+ </g>
+</svg>
